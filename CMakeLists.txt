@@ -11,25 +11,29 @@ target_include_directories(app PRIVATE
 )
 
 target_sources(app PRIVATE
-        src/main.c
-        src/events/events.c
-        src/fs/fs_callback.c
-        src/fs/nvs.c
-        src/leds/neopixels.c
-        src/leds/leds.c
-        src/lua/load-lua.c
-        src/lua/lua.c
-        src/management/eeprom.c
-        src/modbus/modbus.c
-        src/slots/host-api.c
-        src/slots/slots.c
-        src/slots/slotcount.c
-        src/slots/i2c.c
-        src/slots/spi.c
-        src/tasks/io-subsystem.c
-        src/tasks/rgb-updater.c
+        src/main_mock.c
+        #src/main.c
+        src/events/events_mock.c
+        #src/events/events.c
+        #src/fs/fs_callback.c
+        #src/fs/nvs.c
+        #src/leds/neopixels.c
+        #src/leds/leds.c
+        #src/lua/load-lua.c
+        #src/lua/lua.c
+        src/lua/lua_mock.c
+        #src/management/eeprom.c
+        #src/modbus/modbus.c
+        #src/slots/host-api.c
+        #src/slots/slots.c
+        #src/slots/slotcount.c
+        #src/slots/i2c.c
+        #src/slots/spi.c
+        #src/tasks/io-subsystem.c
+        #src/tasks/rgb-updater.c
         src/tasks/supervisor.c
-        src/usb/usb.c
+        #src/usb/usb.c
+        src/swtimer/swtimer.c
 
         lua/lapi.c
         lua/lbaselib.c
@@ -57,7 +61,8 @@ target_sources(app PRIVATE
         lua/ltablib.c
         lua/lundump.c
         lua/lzio.c
-        lua/helper/luaHeap.c
+        lua/helper/luaHeap_mock.c
+        #lua/helper/luaHeap.c
 )
 
 target_compile_definitions(app PRIVATE

@@ -1,15 +1,15 @@
-/ {
-	aliases {
-		modbus0 = &modbus0;
-	};
-};
+/* / { */
+/* 	aliases { */
+/* 		modbus0 = &modbus0; */
+/* 	}; */
+/* }; */
 
 &usart1 {
 	status = "okay";
 	/* Modbus as a child of the UART */
-	modbus0: modbus0 {
-		compatible = "zephyr,modbus-serial";
-		status = "okay";
-		de-gpios = <&gpiob 12 GPIO_ACTIVE_HIGH>;
-	};
+	/* modbus0: modbus0 { */
+	/* 	compatible = "zephyr,modbus-serial"; */
+	/* 	status = "okay"; */
+	/* 	de-gpios = <&gpiob 12 GPIO_ACTIVE_HIGH>; */
+	/* }; */
 };
